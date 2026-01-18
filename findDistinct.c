@@ -1,31 +1,42 @@
 #include <stdio.h>
-
-void distinctElements(int arr[], int size)
-{
-    printf("Distinct elements in the array are: ");
-    for (int i = 0; i < size; i++)
-    {
-        int isDistinct = 1;
-        for (int j = 0; j < i; j++)
-        {
-            if (arr[i] == arr[j])
-            {
-                isDistinct = 0;
-                break;
-            }
-        }
-        if (isDistinct)
-        {
-            printf("%d ", arr[i]);
-        }
-    }
-    printf("\n");
-}
-
+// Main function
 int main()
 {
-    int arr[] = {1, 4, 6, 1, 2, 8, 4, 7, 6, 1};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    distinctElements(arr, n);
-    return 0;
+    int arr1[100], n, ctr = 0;  // Declare an array to store integer values, n for array size, and ctr for counting duplicates
+    int i, j, k;  // Declare loop counters
+    // Prompt the user to input the number of elements to be stored in the array
+    printf("\n\nPrint all unique elements of an array:\n");
+    printf("------------------------------------------\n");
+    printf("Input the number of elements to be stored in the array: ");
+    scanf("%d", &n);
+    // Prompt the user to input n elements into the array
+    printf("Input %d elements in the array :\n", n);
+    for (i = 0; i < n; i++)
+    {
+        printf("element - %d : ", i);
+        scanf("%d", &arr1[i]);  // Read the input and store it in the array
+    }
+    // Print unique elements in the array
+    printf("\nThe unique elements found in the array are: \n");
+    for (i = 0; i < n; i++)
+    {
+        ctr = 0;  // Reset the counter for each element
+        for (j = 0, k = n; j < k + 1; j++)
+        {
+            /* Increment the counter when the search value is duplicate. */
+            if (i != j)
+            {
+                if (arr1[i] == arr1[j])
+                {
+                    ctr++;
+                }
+            }
+        }
+        if (ctr == 0)
+        {
+            printf("%d ", arr1[i]);  // Print the unique element
+        }
+    }
+    printf("\n\n");
+    return 0;  // Return 0 to indicate successful execution
 }
