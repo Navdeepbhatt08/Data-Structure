@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void printDistinctElements(int arr[], int size) {
+void distinctElements(int arr[], int size) {
     printf("Distinct elements in the array are: ");
     for (int i = 0; i < size; i++) {
         int isDistinct = 1;
