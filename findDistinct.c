@@ -4,12 +4,8 @@ int main()
 {
     int arr1[100], n, ctr = 0;  // Declare an array to store integer values, n for array size, and ctr for counting duplicates
     int i, j, k;  // Declare loop counters
-    // Prompt the user to input the number of elements to be stored in the array
-    printf("\n\nPrint all unique elements of an array:\n");
-    printf("------------------------------------------\n");
-    printf("Input the number of elements to be stored in the array: ");
-    scanf("%d", &n);
-    // Prompt the user to input n elements into the array
+ 
+    
     printf("Input %d elements in the array :\n", n);
     for (i = 0; i < n; i++)
     {
