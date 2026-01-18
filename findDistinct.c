@@ -11,7 +11,6 @@ void distinctElements(int arr[], int size) {
                 break;
             }
         }
-        // If it's still marked as distinct, print it
         if (isDistinct) {
             printf("%d ", arr[i]);
         }
