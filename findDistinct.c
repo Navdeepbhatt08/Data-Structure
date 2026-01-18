@@ -26,6 +26,6 @@ int main()
 {
     int arr[] = {1, 4, 6, 1, 2, 8, 4, 7, 6, 1};
     int n = sizeof(arr) / sizeof(arr[0]);
-    printDistinctElements(arr, n);
+    distinctElements(arr, n);
     return 0;
 }
