@@ -22,5 +22,5 @@ int main()
     printf("Total Even Elements = %d\n", even);
     printf("Total Odd Elements  = %d\n", odd);
 
-    return 0;
+    return  0;
 }
