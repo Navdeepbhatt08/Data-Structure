@@ -13,8 +13,6 @@ int main()
     {
         scanf("%d", &a[i]);
     }
-
-    /* Find minimum difference */
     d = a[1] - a[0];
     for(i = 2; i < n; i++)
     {
