@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int main()
 {
     int a[100], n, i, j, count;
@@ -8,25 +7,25 @@ int main()
     scanf("%d", &n);
 
     printf("Enter %d elements:\n", n);
-    for(i = 0; i < n; i++)
+    for (i = 0; i < n; i++)
     {
         scanf("%d", &a[i]);
     }
 
     printf("Frequency of each element:\n");
 
-    for(i = 0; i < n; i++)
+    for (i = 0; i < n; i++)
     {
-        if(a[i] == -1)   // already counted
+        if (a[i] == -1)
             continue;
 
         count = 1;
-        for(j = i + 1; j < n; j++)
+        for (j = i + 1; j < n; j++)
         {
-            if(a[i] == a[j])
+            if (a[i] == a[j])
             {
                 count++;
-                a[j] = -1;   // mark as counted
+                a[j] = -1;
             }
         }
 
