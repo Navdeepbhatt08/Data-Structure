@@ -11,13 +11,12 @@ int main()
     {
         scanf("%d", &a[i]);
     }
-    rintf("Frequency of each element:\n");
-
+     printf("Frequency of each element:\n");
     for (i = 0; i < n; i++)
     {
         if (a[i] == -1)
             continue;
-
+            
         count = 1;
         for (j = i + 1; j < n; j++)
         {
