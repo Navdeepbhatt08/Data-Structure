@@ -11,8 +11,7 @@ int main()
     {
         scanf("%d", &a[i]);
     }
-
-    printf("Frequency of each element:\n");
+    rintf("Frequency of each element:\n");
 
     for (i = 0; i < n; i++)
     {
