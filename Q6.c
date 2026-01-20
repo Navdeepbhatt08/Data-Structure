@@ -20,7 +20,6 @@ int main()
             d = a[i] - a[i - 1];
     }
 
-    /* Find missing term */
     for(i = 1; i < n; i++)
     {
         if(a[i] - a[i - 1] != d)
