@@ -17,6 +17,21 @@ int push(int x)
         printf("%d Pushed Into Stack \n", x);
     }
 }
+
+int pop()
+{
+    if (top == -1)
+    {
+        printf("Stack is Empty");
+    }
+    else
+    {
+
+        printf("Valued Poped is %d ", stack[top]);
+        top--;
+    }
+}
+
 void disp()
 {
     int i;
@@ -36,15 +51,15 @@ void disp()
 
 void peek()
 {
-    
+
     int i;
     if (top == -1)
     {
         printf("Stack is Empty");
     }
     else
-    { 
-        printf("The Top Most Element is : %d",stack[top]);
+    {
+        printf("The Top Most Element is : %d", stack[top]);
     }
 }
 
@@ -55,8 +70,8 @@ int main()
     push(30);
     push(40);
     push(50);
+    pop();
 
-    
     disp();
     peek();
 
