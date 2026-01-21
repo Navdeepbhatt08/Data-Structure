@@ -26,8 +26,7 @@ int pop()
     }
     else
     {
-
-        printf("Valued Poped is %d ", stack[top]);
+        printf("Valued Poped is %d  \n", stack[top]);
         top--;
     }
 }
@@ -48,18 +47,17 @@ void disp()
         }
     }
 }
-
 void peek()
 {
 
     int i;
     if (top == -1)
     {
-        printf("Stack is Empty");
+        printf("Stack is Empty\n");
     }
     else
     {
-        printf("The Top Most Element is : %d", stack[top]);
+        printf("\nThe Top Most Element is : %d\n", stack[top]);
     }
 }
 
@@ -70,6 +68,9 @@ int main()
     push(30);
     push(40);
     push(50);
+    push(60);
+    push(70);
+
     pop();
 
     disp();
