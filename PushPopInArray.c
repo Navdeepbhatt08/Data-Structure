@@ -68,7 +68,6 @@ void push(int stack[], int *top)
     }
 }
 
-// Pop operation
 void pop(int stack[], int *top)
 {
     if (*top == -1)
@@ -82,7 +81,6 @@ void pop(int stack[], int *top)
     }
 }
 
-// Peek operation
 void peek(int stack[], int top)
 {
     if (top == -1)
@@ -95,7 +93,6 @@ void peek(int stack[], int top)
     }
 }
 
-// Display operation
 void display(int stack[], int top)
 {
     int i;
