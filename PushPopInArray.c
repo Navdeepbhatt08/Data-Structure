@@ -51,7 +51,6 @@ int main()
     }
 }
 
-// Push operation
 void push(int stack[], int *top)
 {
     int item;
