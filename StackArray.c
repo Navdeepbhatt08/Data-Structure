@@ -1,21 +1,37 @@
 #define MAX 10
-#include<stdio.h>
+#include <stdio.h>
 
 int stack[MAX];
-int top= -1;
+int top = -1;
 
 int push(int x)
 {
-  if(top==MAX-1)
-  {
-    printf("The Stack is full");
-  }
-  else
-  {
-    top++;
-    stack[top]=x;
-    printf("%d Pushed Into Stack \n",x);
-  }
+    if (top == MAX - 1)
+    {
+        printf("The Stack is full");
+    }
+    else
+    {
+        top++;
+        stack[top] = x;
+        printf("%d Pushed Into Stack \n", x);
+    }
+}
+void disp()
+{
+    int i;
+    if (top == -1)
+    {
+        printf("Stack is Empty");
+    }
+    else
+    {
+        printf("The Stack is : ");
+        for (i = top; i >= 0; i--)
+        {
+            printf("%d ,", stack[i]);
+        }
+    }
 }
 
 int main()
@@ -25,5 +41,8 @@ int main()
     push(30);
     push(40);
     push(50);
+
+    disp();
+
     return 0;
 }
