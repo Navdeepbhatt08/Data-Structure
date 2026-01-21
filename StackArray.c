@@ -26,7 +26,7 @@ int pop()
     }
     else
     {
-        printf("Valued Poped is %d  \n", stack[top]);
+        printf("Valued Poped is %d \n", stack[top]);
         top--;
     }
 }
