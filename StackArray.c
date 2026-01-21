@@ -34,6 +34,20 @@ void disp()
     }
 }
 
+void peek()
+{
+    
+    int i;
+    if (top == -1)
+    {
+        printf("Stack is Empty");
+    }
+    else
+    { 
+        printf("The Top Most Element is : %d",stack[top]);
+    }
+}
+
 int main()
 {
     push(10);
@@ -42,7 +56,9 @@ int main()
     push(40);
     push(50);
 
+    
     disp();
+    peek();
 
     return 0;
 }
