@@ -3,7 +3,7 @@
 
 int enqueue(int[], int);
 int dequeue(int[], int, int);
-int display(int[], int, int);
+int display(int[],int, int);
 
 main()
 {
