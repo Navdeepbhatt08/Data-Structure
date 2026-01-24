@@ -5,13 +5,12 @@ int enqueue(int[], int);
 int dequeue(int[], int, int);
 int display(int[], int, int);
 
-
 main()
 {
     int queue[MAX], front = -1, rear, ch;
     do
     {
-        printf("\n 1. Enqueue \n 2. Dequeue \n 3. Display \n Enter your choice : ");
+        printf("\n 1.Enqueue \n 2. Dequeue \n 3. Display \n Enter your choice : ");
         scanf("%d", &ch);
         switch (ch)
         {
