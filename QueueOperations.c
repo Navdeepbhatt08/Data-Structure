@@ -16,6 +16,7 @@ main()
         switch (ch)
         {
         case 1:
+
             front = enqueue(queue, front, rear);
             break;
         case 2:
