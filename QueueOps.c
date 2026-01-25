@@ -56,13 +56,13 @@ int enqueue(int queue[], int rear, int x)
 
 int dequeue(int queue[], int front, int rear)
 {
-    if (front>rear)
+    if (front > rear)
     {
         printf(" Queue Underflow : ");
     }
     else
     {
-        printf("Value Deleted  : %d",queue[front]);
+        printf("Value Deleted : %d",queue[front]);
         front++;
     }
     return front;
