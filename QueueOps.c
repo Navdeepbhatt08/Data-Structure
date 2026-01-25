@@ -7,7 +7,6 @@ void display(int[], int, int);
 
 main()
 {
-
     int queue[size], front = 0, rear = -1, ch;
     do
     {
@@ -62,19 +61,24 @@ int dequeue(int queue[], int front, int rear)
     }
     else
     {
-        printf("Value Deleted : %d",queue[front]);
+        printf("Value Deleted : %d", queue[front]);
         front++;
     }
     return front;
 }
 
-void display(int queue[], int front, int rear) {
+void display(int queue[], int front, int rear)
+{
     int i;
-    if (front > rear) {
+    if (front > rear)
+    {
         printf("Queue is Empty\n");
-    } else {
+    }
+    else
+    {
         printf("Queue elements: ");
-        for (i = front; i <= rear; i++) {
+        for (i = front; i <= rear; i++)
+        {
             printf("%d ", queue[i]);
         }
         printf("\n");
