@@ -56,16 +56,14 @@ int enqueue(int queue[], int rear, int x)
 
 int dequeue(int queue[], int front, int rear)
 {
-    if (rear == size - 1)
+    if (front>rear)
     {
-        printf("Queue is Full Cannot Insert Elemenet ");
+        printf(" Queue Underflow : ");
     }
     else
     {
-        printf("Enter value to insert : ");
-        scanf("%d", &x);
-        rear++;
-        queue[rear] = x;
+        printf("Value Deleted  : %d",queue[front]);
+        front++;
     }
-    return rear;
+    return front;
 }
