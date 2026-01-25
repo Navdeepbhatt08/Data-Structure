@@ -67,3 +67,16 @@ int dequeue(int queue[], int front, int rear)
     }
     return front;
 }
+
+void display(int queue[], int front, int rear) {
+    int i;
+    if (front > rear) {
+        printf("Queue is Empty\n");
+    } else {
+        printf("Queue elements: ");
+        for (i = front; i <= rear; i++) {
+            printf("%d ", queue[i]);
+        }
+        printf("\n");
+    }
+}
