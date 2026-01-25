@@ -1,6 +1,8 @@
 #include<stdio.h>
 
-void enqueue(int[],int,int);
+int enqueue(int[],int,int);
+int dequeue(int[],int,int);
+int enqueue(int[],int,int);
 
 main()
 {
