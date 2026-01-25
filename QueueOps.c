@@ -48,5 +48,24 @@ int enqueue(int queue[], int rear, int x)
     {
         printf("Enter value to insert : ");
         scanf("%d", &x);
+        rear++;
+        queue[rear] = x;
     }
+    return rear;
+}
+
+int dequeue(int queue[], int front, int rear)
+{
+    if (rear == size - 1)
+    {
+        printf("Queue is Full Cannot Insert Elemenet ");
+    }
+    else
+    {
+        printf("Enter value to insert : ");
+        scanf("%d", &x);
+        rear++;
+        queue[rear] = x;
+    }
+    return rear;
 }

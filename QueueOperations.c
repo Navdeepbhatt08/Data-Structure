@@ -70,8 +70,8 @@ int main() {
             printf("Exiting program\n");
             break;
 
-        default:
-            printf("Invalid choice\n");
+            default:
+                printf("Invalid choice\n");
         }
     } while (choice != 4);
 
