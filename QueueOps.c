@@ -17,7 +17,12 @@ do
     switch(ch)
     {
             case 1: 
-            rear = enqueue()
+            rear = enqueue(queue,rear,front);
+            break;
+
+            case 2: 
+            front = dequeue(queue,rear,front);
+            break;
     }
 
 } while (ch<4);
