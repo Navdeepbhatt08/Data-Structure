@@ -3,7 +3,7 @@
 
 int enqueue(int[], int, int);
 int dequeue(int[], int, int);
-int display(int[], int, int);
+void display(int[], int, int);
 
 main()
 {
@@ -23,9 +23,26 @@ do
             case 2: 
             front = dequeue(queue,rear,front);
             break;
+
+            case 3:
+
+            display(queue,front,rear);
+            break;
+
+            default:
+            printf("Invalid choice\n");
+
     }
 
 } while (ch<4);
 
+return 0;
+}
 
+int enqueue(int queue[],int rear, int x)
+{
+    if(rear== size-1)
+    {
+        printf("Queue is Full Cannot Insert Ele");
+    }
 }
