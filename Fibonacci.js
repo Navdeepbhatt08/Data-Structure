@@ -2,8 +2,7 @@
  * @return {Generator<number>}
  */
 var fibGenerator = function* () {
-  let a = 0,
-    b = 1;
+  let a = 0,b = 1;
 
   while (true) {
     yield a;
