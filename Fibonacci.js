@@ -14,7 +14,7 @@ var fibGenerator = function*() {
 };
 
 /**
- * const gen = fibGenerator();
+
  
 
  
