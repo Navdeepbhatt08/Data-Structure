@@ -15,6 +15,6 @@ var fibGenerator = function*() {
 
 /**
  * const gen = fibGenerator();
- * gen.next().value; // 0
+ 
 
  
