@@ -13,7 +13,7 @@ var fibGenerator = function*() {
 
 };
 
-/**
+
 
  
 
