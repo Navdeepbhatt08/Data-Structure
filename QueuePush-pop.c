@@ -5,5 +5,5 @@ int enqueue(int[],int,int);
 
 main()
 {
-    
+     int queue[SIZE],rear = -1,
 }
