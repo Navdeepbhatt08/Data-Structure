@@ -20,12 +20,10 @@ int main()
 {
     int queue[SIZE], rear = -1, front = 0, item;
 
-    for (int i = 0; i < 4; i++)
-    {
         printf("Enter element to insert: ");
         scanf("%d", &item);
         rear = enqueue(queue, rear, item);
-    }
+   
 
     return 0;
 }
