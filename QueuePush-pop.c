@@ -16,7 +16,7 @@ int enqueue(int queue[], int rear, int item)
         queue[rear] = item;
         printf("Inserted %d\n", item);
     }
-    return rear; // returning updated rear (call by value)
+    return rear;
 }
 
 main()
