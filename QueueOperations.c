@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define SIZE 5
+#define SIZE 3
 
 int enqueue(int[],int,int);
 

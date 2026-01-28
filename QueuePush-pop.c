@@ -1,11 +1,28 @@
 #include <stdio.h>
-#define SIZE 5
+#define SIZE 3
 
 int enqueue(int[], int, int);
+
+int enqueue(int queue[], int rear, int item)
+{
+    if (rear == SIZE - 1)
+    {
+        printf("Queue Overflow\n");
+    }
+    else
+    {
+
+        rear++;
+        queue[rear] = item;
+        printf("Inserted %d\n", item);
+    }
+    return rear; // returning updated rear (call by value)
+}
 
 main()
 {
     int queue[SIZE], rear = -1, front = 0, item;
-    printf("Enter Element To insert : ");
+    printf("Enter element to insert: ");
     scanf("%d", &item);
+    rear = enqueue(queue, rear, item);
 }
