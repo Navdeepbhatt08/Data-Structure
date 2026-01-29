@@ -1,0 +1,13 @@
+const arr = ["nav",'bhatt','geu']
+arr.push(7,8,9)
+console.log(arr)
+arr.pop()
+console.log(arr)
+arr.pop()
+console.log(arr)
+arr.pop()
+console.log(arr)
+arr.pop()
+console.log(arr)
+arr.pop()
+console.log(arr)
