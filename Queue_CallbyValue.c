@@ -17,18 +17,22 @@ int main()
     {
         case 1:
         printf("Enter Element To Insert : ");
-        sanf("%d",&item);
+        scanf("%d",&item);
         rear = enqueue(queue,rear,front);
+        break;
+
         case 2:
         printf("Enter Element To Insert : ");
-        sanf("%d",&item);
+        scanf("%d",&item);
         case 3:
         printf("Enter Element To Insert : ");
-        sanf("%d",&item);
+        scanf("%d",&item);
         case 4:
         printf("Enter Element To Insert : ");
-        sanf("%d",&item);
+        scanf("%d",&item);
     }
+
+
     }
     return 0;
 }
