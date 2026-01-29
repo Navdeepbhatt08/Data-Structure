@@ -9,9 +9,27 @@ void peek(int[], int);
 int main()
 {
     int queue[SIZE], rear = -1, front = 0, item, ch;
-    printf("\n 1. Enqueue \n 2. Dequeue \n 3. Peek \n 4.Display \n Enter your choice : ");
-    scanf("%d", &ch);
 
+    do{
+         printf("\n 1. Enqueue \n 2. Dequeue \n 3. Peek \n 4.Display \n Enter your choice : ");
+    scanf("%d", &ch);
+    switch(ch)
+    {
+        case 1:
+        printf("Enter Element To Insert : ");
+        sanf("%d",&item);
+        rear = enqueue(queue,rear,front);
+        case 2:
+        printf("Enter Element To Insert : ");
+        sanf("%d",&item);
+        case 3:
+        printf("Enter Element To Insert : ");
+        sanf("%d",&item);
+        case 4:
+        printf("Enter Element To Insert : ");
+        sanf("%d",&item);
+    }
+    }
     return 0;
 }
 
