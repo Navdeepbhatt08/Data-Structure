@@ -1,20 +1,10 @@
 #include <stdio.h>
 #define SIZE 5
 
-int enqueue(int queue[], int rear, int item)
-{
-    if (rear == SIZE - 1)
-    {
-        printf("Queue Overflow\n");
-    }
-    else
-    {
-        rear++;
-        queue[rear] = item;
-        printf("Inserted %d\n", item);
-    }
-    return rear;
-}
+int enqueue(int[],int,int);
+int dequeue(int[],int,int);
+void display(int[],int);
+void peek(int[],int);
 
 int main()
 {
@@ -28,4 +18,19 @@ int main()
     }
 
     return 0;
+}
+
+int enqueue(int queue[], int rear, int item)
+{
+    if (rear == SIZE - 1)
+    {
+        printf("Queue Overflow\n");
+    }
+    else
+    {
+        rear++;
+        queue[rear] = item;
+        printf("Inserted %d\n", item);
+    }
+    return rear;
 }
