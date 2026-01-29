@@ -4,3 +4,8 @@
 int Cenqueue(int[],int,int);
 int Cdequeue(int[],int,int);
 
+main()
+{
+    
+}
+
