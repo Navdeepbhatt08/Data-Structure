@@ -29,7 +29,7 @@ int enqueue(int queue[], int rear, int item)
     }
     return rear;
 }
-int enqueue(int queue[], int rear, int item)
+int dequeue(int queue[], int rear, int item)
 {
     if (rear == SIZE - 1)
     {
