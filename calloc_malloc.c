@@ -7,5 +7,5 @@ main()
     float avg = 0;
     printf("Enter the number of elements : ");
     scanf("%d",&n);
-    for
+    for(i =0)
 }
