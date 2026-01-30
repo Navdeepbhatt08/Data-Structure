@@ -6,5 +6,5 @@ main()
     int i,n=0,s=0;
     float avg = 0;
     printf("Enter the number of elements : ");
-    scanf("%d")
+    scanf("%d",&)
 }
