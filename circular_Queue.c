@@ -2,7 +2,7 @@
 #define max 5
 
 int Cenqueue(int[], int, int);
-// int Cdequeue(int[],int,int);
+int Cdequeue(int[],int,int);
 void display(int[], int, int);
 
 main()
@@ -24,11 +24,13 @@ main()
             break;
 
         case 2:
-            display(cq, front, rear);
+            front = Cdequeue(cq, front, rear);
             break;
         }
     } while (ch != 3);
 }
+
+//Funtion Declaration
 
 int Cenqueue(int cq[], int rear, int front)
 {
@@ -47,6 +49,23 @@ int Cenqueue(int cq[], int rear, int front)
         printf("Element inserted %d ", x);
     }
     return (rear);
+}
+
+int Cdequeue(int cq[], int rear, int front)
+{
+    int x;
+    if (front == -1)
+    {
+        printf("Queue is Empty , Cannot Delete.... ");
+    }
+    else
+    {
+    printf("Element Deleted %d ",cq[front]);
+
+    front ++;
+        cq[front] = x;
+    }
+    return (front);
 }
 
 void display(int cq[], int front, int rear)
