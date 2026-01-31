@@ -42,7 +42,7 @@ struct Queue dequeue(struct Queue q) {
     return q;
 }
 
-/* Display operation */
+//Display
 void display(struct Queue q) {
     int i;
 
