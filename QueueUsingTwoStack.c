@@ -8,7 +8,7 @@ struct Queue {
     int top2;
 };
 
-/* Enqueue operation */
+// Insertion
 struct Queue enqueue(struct Queue q, int item) {
     if (q.top1 == SIZE - 1) {
         printf("Queue Overflow\n");
