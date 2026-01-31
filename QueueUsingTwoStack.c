@@ -20,7 +20,7 @@ struct Queue enqueue(struct Queue q, int item) {
     return q;
 }
 
-/* Dequeue operation */
+// Deletion
 struct Queue dequeue(struct Queue q) {
     int i;
 
