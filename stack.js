@@ -9,7 +9,7 @@ const rl = readline.createInterface({
 let stack = [];
 
 function showMenu() {
-    console.log("\n----- STACK MENU -----");
+    console.log("\n----- STACK MENU -----")
     console.log("1. Push");
     console.log("2. Pop");
     console.log("3. Peek");
