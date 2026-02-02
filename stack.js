@@ -29,7 +29,7 @@ function handleChoice(choice) {
             });
             break;
 
-        case "2": // POP
+        case "2": 
             if (stack.length === 0) {
                 console.log("Stack Underflow! Stack is empty");
             } else {
