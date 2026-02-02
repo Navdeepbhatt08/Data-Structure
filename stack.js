@@ -48,7 +48,7 @@ function handleChoice(choice) {
             showMenu();
             break;
 
-        case "4": // DISPLAY
+        case "4": 
             if (stack.length === 0) {
                 console.log("Stack is empty");
             } else {
