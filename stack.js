@@ -21,7 +21,7 @@ function showMenu() {
 
 function handleChoice(choice) {
     switch (choice) {
-        case "1": // PUSH
+        case "1": 
             rl.question("Enter element to push: ", (element) => {
                 stack.push(element);
                 console.log(element + " pushed into stack");
