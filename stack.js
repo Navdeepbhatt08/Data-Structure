@@ -39,7 +39,7 @@ function handleChoice(choice) {
             showMenu();
             break;
 
-        case "3": // PEEK
+        case "3": 
             if (stack.length === 0) {
                 console.log("Stack is empty");
             } else {
