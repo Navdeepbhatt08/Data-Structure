@@ -1,8 +1,8 @@
 #include <stdio.h>
 #define SIZE 5
 
-void enqueue(int queue[], int *rear, int *item);
-void dequeue(int queue[], int *front, int *rear);
+void enqueue(int queue[], int *rear, int item);
+void dequeue(int queue[], int *front, int rear);
 void peek(int queue[], int front, int rear);
 void display(int queue[], int front, int rear);
 
@@ -53,7 +53,7 @@ int main()
 
     return 0;
 }
-void enqueue(int queue[], int *rear, int *item)
+void enqueue(int queue[], int *rear, int item)
 {
     if (*rear == SIZE - 1)
     {
@@ -67,7 +67,7 @@ void enqueue(int queue[], int *rear, int *item)
     }
 }
 
-void dequeue(int queue[], int *front, int *rear)
+void dequeue(int queue[], int *front, int rear)
 {
     if (*front > rear)
     {
