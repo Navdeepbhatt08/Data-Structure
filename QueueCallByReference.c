@@ -53,6 +53,7 @@ int main()
 
     return 0;
 }
+
 void enqueue(int queue[], int *rear, int item)
 {
     if (*rear == SIZE - 1)
