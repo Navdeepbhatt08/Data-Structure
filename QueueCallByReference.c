@@ -1,16 +1,16 @@
 #include <stdio.h>
 #define SIZE 5
 
-int enqueue(int queue[], int rear, int item);
-int dequeue(int queue[], int rear, int front);
-void display(int queue[], int front, int rear);
+void enqueue(int queue[], int *rear, int *item);
+void dequeue(int queue[], int *front, int *rear);
 void peek(int queue[], int front, int rear);
+void display(int queue[], int front, int rear);
 
 int main()
 {
     int queue[SIZE];
-    int rear = -1, front = 0;
-    int item, ch;
+    int front = 0, rear = -1;
+    int ch, item;
 
     do
     {
@@ -27,11 +27,11 @@ int main()
         case 1:
             printf("Enter element: ");
             scanf("%d", &item);
-            rear = enqueue(queue, rear, item);
+            enqueue(queue, &rear, item);
             break;
 
         case 2:
-            front = dequeue(queue, rear, front);
+            dequeue(queue, &front, rear);
             break;
 
         case 3:
@@ -43,7 +43,7 @@ int main()
             break;
 
         case 5:
-            printf("Exiting...\n");
+            printf("Program Ended\n");
             break;
 
         default:
@@ -53,35 +53,32 @@ int main()
 
     return 0;
 }
-
-int enqueue(int queue[], int rear, int item)
+void enqueue(int queue[], int *rear, int *item)
 {
-    if (rear == SIZE - 1)
+    if (*rear == SIZE - 1)
     {
         printf("Queue Overflow\n");
     }
     else
     {
-        rear++;
-        queue[rear] = item;
+        (*rear)++;
+        queue[*rear] = item;
         printf("Inserted %d\n", item);
     }
-    return rear;
 }
-int dequeue(int queue[], int rear, int front)
+
+void dequeue(int queue[], int *front, int *rear)
 {
-    if (front > rear)
+    if (*front > rear)
     {
         printf("Queue Underflow\n");
     }
     else
     {
-        printf("Deleted %d\n", queue[front]);
-        front++;
+        printf("Deleted %d\n", queue[*front]);
+        (*front)++;
     }
-    return front;
 }
-
 void peek(int queue[], int front, int rear)
 {
     if (front > rear)
@@ -89,7 +86,6 @@ void peek(int queue[], int front, int rear)
     else
         printf("Front element: %d\n", queue[front]);
 }
-
 void display(int queue[], int front, int rear)
 {
     if (front > rear)

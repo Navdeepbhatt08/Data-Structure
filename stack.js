@@ -57,7 +57,7 @@ function handleChoice(choice) {
             showMenu();
             break;
 
-        case "5": // EXIT
+        case "5": 
             console.log("Exiting program...");
             rl.close();
             break;
@@ -68,5 +68,4 @@ function handleChoice(choice) {
     }
 }
 
-// start program
 showMenu();
