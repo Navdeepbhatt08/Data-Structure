@@ -21,6 +21,7 @@ main()
             l=p;
         }
         printf("Continue (0/1) : ");
+        scanf("%d",&ch);
     }
     
 }
