@@ -13,6 +13,7 @@ main()
     {
         printf("Enter value to insert : ");
         scanf("%d",&v);
+        p=(sl*)malloc(sizeof(sl));
     }
     
 }
