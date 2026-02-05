@@ -14,6 +14,13 @@ main()
         printf("Enter value to insert : ");
         scanf("%d",&v);
         p=(sl*)malloc(sizeof(sl));
+        if(p!=NULL)
+        {
+            p->data=v;
+            p->next = l;
+            l=p;
+        }
+        printf("Continue (0/1) : ");
     }
     
 }
