@@ -11,7 +11,8 @@ main()
     int ch,v;
     while (1)
     {
-        printf("Enter value to insert : ")
+        printf("Enter value to insert : ");
+        scanf("%d",&v);
     }
     
 }
