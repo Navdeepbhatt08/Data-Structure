@@ -7,5 +7,5 @@ typedef struct Node {
 
 main()
 {
-    int 
+    sl *p= NULL ,
 }
