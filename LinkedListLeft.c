@@ -7,5 +7,11 @@ typedef struct Node {
 
 main()
 {
-    sl *p= NULL ,
+    sl *p= NULL , *l = NULL;
+    int ch,v;
+    while (1)
+    {
+        printf("Enter value to insert : ")
+    }
+    
 }
