@@ -22,6 +22,17 @@ main()
         }
         printf("Continue (0/1) : ");
         scanf("%d",&ch);
+        if(ch==0)
+        {
+            break;
+        }
     }
+    while (p!=NULL)
+    {
+        printf("%d -> ",p->data);
+        p=p->next;
+    }
+    p=l;
+    
     
 }
