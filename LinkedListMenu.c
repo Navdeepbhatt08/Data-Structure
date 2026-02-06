@@ -9,5 +9,6 @@ typedef struct node
 
 void insertBeg()
 {
+    node *p=NULL, *l = NULL,*r=NULL;
     
 }
