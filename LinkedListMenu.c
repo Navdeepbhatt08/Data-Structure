@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Node structure
+
 struct Node {
     int data;
     struct Node* next;
@@ -11,7 +11,6 @@ struct Node* head = NULL;
 struct Node* sortedHead = NULL;
 struct Node* reversedHead = NULL;
 
-// Create new node
 struct Node* createNode(int value) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = value;
@@ -19,7 +18,6 @@ struct Node* createNode(int value) {
     return newNode;
 }
 
-// Insert at beginning
 void insertAtBeginning() {
     int value;
     printf("Enter value: ");
@@ -30,7 +28,6 @@ void insertAtBeginning() {
     head = newNode;
 }
 
-// Insert at end
 void insertAtEnd() {
     int value;
     printf("Enter value: ");
@@ -50,7 +47,6 @@ void insertAtEnd() {
     temp->next = newNode;
 }
 
-// Insert at specific position
 void insertAtPosition() {
     int value, pos, i = 1;
     printf("Enter value and position: ");
@@ -106,7 +102,6 @@ void deleteNode() {
     free(temp);
 }
 
-// Sort linked list (Bubble sort)
 void sortList() {
     sortedHead = head;
     struct Node *i, *j;
@@ -123,7 +118,7 @@ void sortList() {
     }
 }
 
-// Display list
+
 void display(struct Node* node) {
     if (node == NULL) {
         printf("List is empty\n");
@@ -137,7 +132,7 @@ void display(struct Node* node) {
     printf("NULL\n");
 }
 
-// Reverse linked list
+
 void reverseList() {
     struct Node *prev = NULL, *curr = head, *next = NULL;
 
@@ -151,7 +146,6 @@ void reverseList() {
     reversedHead = prev;
 }
 
-// Main function
 int main() {
     int choice;
 
