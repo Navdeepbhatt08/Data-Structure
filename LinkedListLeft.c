@@ -1,17 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct Node {
+typedef struct Node
+{
     int data;
-    struct Node* next;
+    struct Node *next;
 } Node;
 
-Node* head = NULL;
+Node *head = NULL;
 
 /* Create new node */
-Node* createNode(int value) {
-    Node* newNode = (Node*)malloc(sizeof(Node));
-    if (newNode == NULL) {
+Node *createNode(int value)
+{
+    Node *newNode = (Node *)malloc(sizeof(Node));
+    if (newNode == NULL)
+    {
         printf("Memory allocation failed\n");
         exit(1);
     }
@@ -21,30 +24,33 @@ Node* createNode(int value) {
 }
 
 /* Insert at beginning */
-void insertAtBeginning() {
+void insertAtBeginning()
+{
     int value;
     printf("Enter value: ");
     scanf("%d", &value);
 
-    Node* newNode = createNode(value);
+    Node *newNode = createNode(value);
     newNode->next = head;
     head = newNode;
 }
 
 /* Insert at end */
-void insertAtEnd() {
+void insertAtEnd()
+{
     int value;
     printf("Enter value: ");
     scanf("%d", &value);
 
-    Node* newNode = createNode(value);
+    Node *newNode = createNode(value);
 
-    if (head == NULL) {
+    if (head == NULL)
+    {
         head = newNode;
         return;
     }
 
-    Node* temp = head;
+    Node *temp = head;
     while (temp->next != NULL)
         temp = temp->next;
 
@@ -52,50 +58,59 @@ void insertAtEnd() {
 }
 
 /* Insert at specific position */
-void insertAtPosition() {
+void insertAtPosition()
+{
     int value, pos, i = 1;
     printf("Enter value and position: ");
     scanf("%d %d", &value, &pos);
 
-    if (pos == 1) {
+    if (pos == 1)
+    {
         insertAtBeginning();
         return;
     }
 
-    Node* temp = head;
-    while (temp != NULL && i < pos - 1) {
+    Node *temp = head;
+    while (temp != NULL && i < pos - 1)
+    {
         temp = temp->next;
         i++;
     }
 
-    if (temp == NULL) {
+    if (temp == NULL)
+    {
         printf("Invalid position\n");
         return;
     }
 
-    Node* newNode = createNode(value);
+    Node *newNode = createNode(value);
     newNode->next = temp->next;
     temp->next = newNode;
 }
 
 /* Display list */
-void display(Node* node) {
-    if (node == NULL) {
+void display(Node *node)
+{
+    if (node == NULL)
+    {
         printf("List is empty\n");
         return;
     }
 
-    while (node != NULL) {
+    while (node != NULL)
+    {
         printf("%d -> ", node->data);
         node = node->next;
     }
     printf("NULL\n");
 }
 
-int main() {
+int main()
+{
     int choice;
 
-    while (1) {
+    while (1)
+    {
         printf("\n1. Insert at Beginning");
         printf("\n2. Insert at End");
         printf("\n3. Insert at Position");
@@ -105,13 +120,24 @@ int main() {
         printf("\nEnter choice: ");
         scanf("%d", &choice);
 
-        switch (choice) {
-            case 1: insertAtBeginning(); break;
-            case 2: insertAtEnd(); break;
-            case 3: insertAtPosition(); break;
-            case 4: display(head); break;
-            case 5: exit(0);
-            default: printf("Invalid choice\n");
+        switch (choice)
+        {
+        case 1:
+            insertAtBeginning();
+            break;
+        case 2:
+            insertAtEnd();
+            break;
+        case 3:
+            insertAtPosition();
+            break;
+        case 4:
+            display(head);
+            break;
+        case 5:
+            exit(0);
+        default:
+            printf("Invalid choice\n");
         }
     }
     return 0;
