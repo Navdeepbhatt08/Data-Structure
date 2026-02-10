@@ -20,7 +20,8 @@ class linkedList {
 
     if (!this.head) {
       this.head = node;
-    } else {
+    } 
+    else {
       current = this.head;
       while (current.next) {
         current = current.next;
