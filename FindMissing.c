@@ -13,7 +13,8 @@ int findMissing(int a[], int n)
     return totalSum - arrSum;
 }
 
-int main() {
+int main()
+{
     int i;
     int arr1[] = {1, 3, 4, 2, 5, 6, 9, 8};
     int ctr = sizeof(arr1) / sizeof(arr1[0]);

@@ -45,7 +45,6 @@ main()
     }
     printf("NULL\n");
 
-
     p = head;
     sl *nextNode;
     while (p != NULL)
