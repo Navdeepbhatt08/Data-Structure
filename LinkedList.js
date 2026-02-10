@@ -9,7 +9,6 @@ class linkedList {
     this.head = null;
     this.size = 0;
   }
-
   insertFirst(data) {
     this.head = new Node(data, this.head);
     this.size++;
@@ -46,8 +45,8 @@ ll.insertFirst(100);
 ll.insertFirst(200);
 ll.insertFirst(300);
 
-ll.insertLast(400)
-ll.insertLast(500)
-ll.insertLast(600)
+ll.insertLast(400);
+ll.insertLast(500);
+ll.insertLast(600);
 
 ll.printListData();
