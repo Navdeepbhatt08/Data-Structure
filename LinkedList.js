@@ -30,7 +30,6 @@ class linkedList {
     this.size++;
   }
 
-  //Print data
   printListData() {
     let current = this.head;
     while (current) {
