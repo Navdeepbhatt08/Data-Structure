@@ -15,7 +15,6 @@ class linkedList {
     this.size++;
   }
 
-  //Insert Last Node
   insertLast(data) {
     let node = new Node(data);
     let current;
