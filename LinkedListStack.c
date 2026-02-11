@@ -6,7 +6,7 @@ typedef struct Node {
     struct Node* next;
 } Node;
 
-// PUSH (Call by Value)
+
 Node* push(Node* top, int value) {
     Node* newNode = (Node*)malloc(sizeof(Node));
 
