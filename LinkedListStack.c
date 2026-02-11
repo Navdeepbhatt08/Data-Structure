@@ -58,7 +58,7 @@ void display(Node *top)
     printf("Stack elements:\n");
     while (temp != NULL)
     {
-        printf("%d\n", temp->data);
+        printf("%d->\n ", temp->data);
         temp = temp->next;
     }
 }
@@ -72,8 +72,8 @@ int main()
     {
         printf("1. Push\n");
         printf("2. Pop\n");
-        printf("4. Display\n");
-        printf("5. Exit\n");
+        printf("3. Display\n");
+        printf("4. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
 
