@@ -39,12 +39,7 @@ Node* pop(Node* top) {
     return top;
 }
 
-void peek(Node* top) {
-    if (top == NULL)
-        printf("Stack is empty\n");
-    else
-        printf("Top element is: %d\n", top->data);
-}
+
 
 void display(Node* top) {
     Node* temp = top;
