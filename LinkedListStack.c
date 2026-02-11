@@ -77,11 +77,11 @@ int main() {
                 top = pop(top);
                 break;
 
-            case 4:
+            case 3:
                 display(top);
                 break;
 
-            case 5:
+            case 4:
                 printf("Exiting program...\n");
                 exit(0);
 
