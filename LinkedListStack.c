@@ -39,8 +39,6 @@ Node* pop(Node* top) {
     return top;
 }
 
-
-
 void display(Node* top) {
     Node* temp = top;
 
@@ -61,7 +59,6 @@ int main() {
     int choice, value;
 
     while (1) {
-        printf("\n----- STACK MENU -----\n");
         printf("1. Push\n");
         printf("2. Pop\n");
         printf("3. Peek\n");
