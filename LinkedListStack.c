@@ -1,19 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct Node {
+typedef struct Node
+{
     int data;
-    struct Node* next;
+    struct Node *next;
 } Node;
 
+Node *push(Node *top, int value)
+{
+    Node *newNode = (Node *)malloc(sizeof(Node));
 
-Node* push(Node* top, int value) {
-    Node* newNode = (Node*)malloc(sizeof(Node));
-
-    if (newNode == NULL) {
+    if (newNode == NULL)
+    {
         printf("Stack Overflow\n");
         return top;
     }
+
+    printf("Enter value to push: ");
+    scanf("%d", &value);
 
     newNode->data = value;
     newNode->next = top;
@@ -23,14 +28,15 @@ Node* push(Node* top, int value) {
     return top;
 }
 
-
-Node* pop(Node* top) {
-    if (top == NULL) {
+Node *pop(Node *top)
+{
+    if (top == NULL)
+    {
         printf("Stack Underflow\n");
         return top;
     }
 
-    Node* temp = top;
+    Node *temp = top;
     printf("%d popped from stack\n", top->data);
 
     top = top->next;
@@ -39,26 +45,31 @@ Node* pop(Node* top) {
     return top;
 }
 
-void display(Node* top) {
-    Node* temp = top;
+void display(Node *top)
+{
+    Node *temp = top;
 
-    if (temp == NULL) {
+    if (temp == NULL)
+    {
         printf("Stack is empty\n");
         return;
     }
 
     printf("Stack elements:\n");
-    while (temp != NULL) {
+    while (temp != NULL)
+    {
         printf("%d\n", temp->data);
         temp = temp->next;
     }
 }
 
-int main() {
-    Node* top = NULL;
+int main()
+{
+    Node *top = NULL;
     int choice, value;
 
-    while (1) {
+    while (1)
+    {
         printf("1. Push\n");
         printf("2. Pop\n");
         printf("4. Display\n");
@@ -66,25 +77,26 @@ int main() {
         printf("Enter your choice: ");
         scanf("%d", &choice);
 
-        switch (choice) {
-            case 1:
-                top = push(top, value);
-                break;
+        switch (choice)
+        {
+        case 1:
+            top = push(top, value);
+            break;
 
-            case 2:
-                top = pop(top);
-                break;
+        case 2:
+            top = pop(top);
+            break;
 
-            case 3:
-                display(top);
-                break;
+        case 3:
+            display(top);
+            break;
 
-            case 4:
-                printf("Exiting program...\n");
-                exit(0);
+        case 4:
+            printf("Exiting program...\n");
+            exit(0);
 
-            default:
-                printf("Invalid choice!\n");
+        default:
+            printf("Invalid choice!\n");
         }
     }
 
