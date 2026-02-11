@@ -11,3 +11,8 @@ stack * push(stack*);
 stack * pop(stack*);
 void display(stack*);
 
+main()
+{
+    
+}
+
