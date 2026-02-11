@@ -23,7 +23,7 @@ Node* push(Node* top, int value) {
     return top;
 }
 
-// POP (Call by Value)
+
 Node* pop(Node* top) {
     if (top == NULL) {
         printf("Stack Underflow\n");
