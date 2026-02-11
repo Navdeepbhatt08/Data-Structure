@@ -13,6 +13,8 @@ void display(stack*);
 
 main()
 {
+
+    int top,ch;
     
 }
 
