@@ -77,10 +77,6 @@ int main() {
                 top = pop(top);
                 break;
 
-            case 3:
-                peek(top);
-                break;
-
             case 4:
                 display(top);
                 break;
