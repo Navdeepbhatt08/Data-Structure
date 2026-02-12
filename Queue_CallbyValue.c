@@ -37,7 +37,6 @@ int main()
         case 4:
             display(queue, front, rear);
             break;
-
         case 5:
             printf("Exiting...\n");
             break;
