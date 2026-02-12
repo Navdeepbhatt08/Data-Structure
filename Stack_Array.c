@@ -51,7 +51,6 @@ int push(int stack[], int top)
     }
     return (top);
 }
-
 int pop(int stack[], int top)
 {
     int x;
