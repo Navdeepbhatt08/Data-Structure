@@ -8,7 +8,6 @@ void peek(int[], int);
 
 main()
 {
-
     int stack[max], top = -1, ch;
     do
     {
