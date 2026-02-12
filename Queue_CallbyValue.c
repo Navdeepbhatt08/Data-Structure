@@ -11,7 +11,6 @@ int main()
     int queue[SIZE];
     int rear = -1, front = 0;
     int item, ch;
-
     do
     {
         printf("\n1. Enqueue");
