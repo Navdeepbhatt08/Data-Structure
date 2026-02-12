@@ -28,7 +28,6 @@ int main()
             scanf("%d", &item);
             rear = enqueue(queue, rear, item);
             break;
-
         case 2:
             front = dequeue(queue, rear, front);
             break;
