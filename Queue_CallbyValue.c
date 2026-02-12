@@ -31,11 +31,9 @@ int main()
         case 2:
             front = dequeue(queue, rear, front);
             break;
-
         case 3:
             peek(queue, front, rear);
             break;
-
         case 4:
             display(queue, front, rear);
             break;
