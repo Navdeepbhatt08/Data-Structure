@@ -1,4 +1,3 @@
-arr.pop()
-console.log(arr)
-arr.pop()
-console.log(arr)
+et a = 6453534;
+
+let b = 645543;

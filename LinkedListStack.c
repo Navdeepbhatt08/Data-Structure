@@ -7,80 +7,30 @@ typedef struct Node
     struct Node *next;
 } Node;
 
-Node *push(Node *top, int value)
-{
-    Node *newNode = (Node *)malloc(sizeof(Node));
-
-    if (newNode == NULL)
-    {
-        printf("Stack Overflow\n");
-        return top;
-    }
-
-    printf("Enter value to push: ");
-    scanf("%d", &value);
-
-    newNode->data = value;
-    newNode->next = top;
-    top = newNode;
-
-    printf("%d pushed into stack\n", value);
-    return top;
-}
-
-Node *pop(Node *top)
-{
-    if (top == NULL)
-    {
-        printf("Stack Underflow\n");
-        return top;
-    }
-
-    Node *temp = top;
-    printf("%d popped from stack\n", top->data);
-
-    top = top->next;
-    free(temp);
-
-    return top;
-}
-
-void display(Node *top)
-{
-    Node *temp = top;
-
-    if (temp == NULL)
-    {
-        printf("Stack is empty\n");
-        return;
-    }
-
-    printf("Stack elements:\n");
-    while (temp != NULL)
-    {
-        printf("%d->\n ", temp->data);
-        temp = temp->next;
-    }
-}
+Node *push(Node *);
+Node *pop(Node *);
+void disp(Node *);
+void revdisp(Node *);
 
 int main()
 {
     Node *top = NULL;
-    int choice, value;
+    int choice;
 
     while (1)
     {
         printf("1. Push\n");
         printf("2. Pop\n");
         printf("3. Display\n");
-        printf("4. Exit\n");
+        printf("4. Reverse Display\n");
+        printf("5. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
 
         switch (choice)
         {
         case 1:
-            top = push(top, value);
+            top = push(top);
             break;
 
         case 2:
@@ -88,12 +38,12 @@ int main()
             break;
 
         case 3:
-            display(top);
+            disp(top);
             break;
 
         case 4:
-            printf("Exiting program...\n");
-            exit(0);
+            revdisp(top);
+            break;
 
         default:
             printf("Invalid choice!\n");
@@ -101,4 +51,65 @@ int main()
     }
 
     return 0;
+}
+
+Node *push(Node *top)
+{
+    int x;
+    Node *p = NULL;
+    p = (Node *)malloc(sizeof(Node));
+    if (p != NULL)
+    {
+        printf("Enter data : ");
+        scanf("%d", &x);
+        p->data = x;
+        p->next = top;
+        top = p;
+    }
+    return (top);
+}
+Node *pop(Node *top)
+{
+    int x;
+    Node *p = NULL;
+    if (top == NULL)
+    {
+        printf("Empty");
+    }
+    else
+    {
+        x = top->data;
+        printf("%d poped\n", x);
+        p = top;
+        top = top->next;
+        free(p);
+    }
+    return (top);
+}
+void disp(Node *top)
+{
+    if (top == NULL)
+    {
+        printf("Whattt......? It's empty brother..");
+    }
+    else
+    {
+        while (top != NULL)
+        {
+            printf("\n%d", top->data);
+            top = top->next;
+        }
+        printf("\n");
+    }
+}
+
+void revdisp(Node *top)
+{
+    if (top == NULL)
+    {
+        printf("Whattt......? It's empty brother..\n");
+        return;
+    }
+    revdisp(top->next);
+    printf("\n%d\n", top->data);
 }
