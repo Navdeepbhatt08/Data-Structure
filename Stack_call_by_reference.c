@@ -64,7 +64,7 @@ void push(int stack[], int *top)
         scanf("%d", &item);
         (*top)++;
         stack[*top] = item;
-        printf("Element pushed successfully.\n");
+       
     }
 }
 
