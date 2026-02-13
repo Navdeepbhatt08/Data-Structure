@@ -24,8 +24,7 @@ int main()
         switch (ch)
         {
         case 1:
-            printf("Enter element: ");
-            scanf("%d", &item);
+            
             rear = enqueue(queue, rear, item);
             break;
         case 2:
