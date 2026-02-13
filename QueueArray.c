@@ -3,34 +3,76 @@
 
 int Enque(int [],int);
 int Deque(int [],int);
-int Display(int [],int,int);
+void Display(int [],int,int);
 
 int main()
 {
 int ch;
-int front=0,rear=-1, queue[max];
+int front=-1,rear=-1, queue[max];
 do
     {
-        printf("\n1.Push \n2.Pop \n3.Display \n4.Peek \nEnter your choice : ");
+        printf("\n1.Enque \n2.Deque \n3.Display\nEnter your choice : ");
         scanf("%d", &ch);
         switch (ch)
         {
         case 1:
-            top = push(stack, top);
+            rear = Enque(queue,rear);
             break;
         case 2:
-            top = pop(stack, top);
+            front = Deque(queue,front);
             break;
         case 3:
-            display(stack, top);
-            break;
-        case 4:
-            peek(stack, top);
+            Display(queue,front,rear);
             break;
 
         default:
             break;
         }
-    } while (ch != 10);
+    } while (ch != 0);
+}
 
+int Enque(int queue[],int rear)
+{
+    int x;
+    if(rear=max-1)
+    {
+        printf("Queue Is Full");
+    }
+    else
+    {
+        printf("Enter a value to insert : ");
+        scanf("%d",&x);
+        rear++;
+        queue[rear]=x;
+    }
+    return(rear);
+}
+int Deque(int queue[],int front)
+{
+    int x;
+    if(front==0)
+    {
+      printf("Empty Cannot Delete : \n");
+    }
+    else{
+        x = queue[front];
+        printf("Value Deleted : %x",x);
+        front++;
+    }
+    return(front);
+}
+
+void Display(int queue[],int front,int rear)
+{
+    if(rear<front)
+    {
+        printf("Empty : \n");
+    }
+    else
+    {
+        while(front<=rear)
+        {
+            printf("%d ",queue[front]);
+        }
+    }
 }
