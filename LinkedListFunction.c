@@ -44,12 +44,10 @@ void display(slist *node)
     }
     printf("NULL\n");
 }
-
 int main()
 {
     int ch;
     slist *head = NULL;
-
     do
     {
         printf("\nEnter choice : ");
