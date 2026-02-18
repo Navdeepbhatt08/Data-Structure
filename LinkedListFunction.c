@@ -36,7 +36,6 @@ void display(slist *node)
         printf("List is empty\n");
         return;
     }
-
     while (node != NULL)
     {
         printf("%d -> ", node->data);
