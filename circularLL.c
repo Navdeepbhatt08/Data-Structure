@@ -43,9 +43,7 @@ void display(cl **f, cl **r)
     }
 
     cl *temp = *f;
-
     printf("Circular Linked List: ");
-
     do
     {
         printf("%d -> ", temp->data);
