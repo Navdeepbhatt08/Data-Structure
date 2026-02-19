@@ -41,7 +41,6 @@ void display(cl **f, cl **r)
         printf("List is Empty\n");
         return;
     }
-
     cl *temp = *f;
     printf("Circular Linked List: ");
     do
