@@ -29,7 +29,6 @@ void insert(cl **f, cl **r)
             *r = p;
             (*r)->next = *f;
         }
-
         (*r)->next = *f;
     }
 }
