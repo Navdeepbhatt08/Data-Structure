@@ -21,20 +21,20 @@ int push(int top, int stack[])
 
 int pop(int top, int stack[])
 {
-    int x;
+     int x;
     if (top == -1)
     {
-        printf("Stack is Underflow , Cannot Pop ");
+        printf("Empty hai yrrr🤨");
     }
     else
     {
         x = stack[top];
-
-        printf("Value poped : %d", &x);
+        printf("Value Poped : %d\n", x);
         top--;
     }
     return (top);
 }
+
 void display(int top, int stack[])
 {
     if (top == -1)
@@ -57,7 +57,7 @@ main()
 
     do
     {
-        printf("1. Push\n2. Pop \n3. Display\nEnter your choice : ");
+        printf("\n1. Push\n2. Pop \n3. Display\nEnter your choice : ");
         scanf("%d", &ch);
         switch (ch)
         {
