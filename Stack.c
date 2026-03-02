@@ -43,6 +43,11 @@ void display(int top, int stack[])
     }
     else
     {
+        while (top >= 0)
+        {
+            printf("%d\n", stack[top]);
+            top--;
+        }
     }
 }
 
