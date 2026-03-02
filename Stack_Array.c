@@ -67,7 +67,7 @@ int pop(int stack[], int top)
 }
 void display(int stack[], int top)
 {
-    int i, x;
+    
     if (top == -1)
     {
         printf("Empty Stack");
