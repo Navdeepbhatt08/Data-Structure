@@ -57,7 +57,8 @@ main()
 
     do
     {
-        printf("1. Push\n2. Pop \n3. Display\nEnter your choice : ", &ch);
+        printf("1. Push\n2. Pop \n3. Display\nEnter your choice : ");
+        scanf("%d", &ch);
         switch (ch)
         {
         case 1:
