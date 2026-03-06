@@ -11,7 +11,7 @@ int enqueue(int queue[], int rear, int item) {
         queue[rear] = item;
         printf("Inserted %d\n", item);
     }
-    return rear;   // returning updated rear (call by value)
+    return rear;  
 }
 
 int dequeue(int queue[], int front, int rear) {
@@ -21,7 +21,7 @@ int dequeue(int queue[], int front, int rear) {
         printf("Deleted %d\n", queue[front]);
         front++;
     }
-    return front;  // returning updated front (call by value)
+    return front;  
 }
 
 void display(int queue[], int front, int rear) {
