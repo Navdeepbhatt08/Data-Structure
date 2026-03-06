@@ -21,10 +21,10 @@ int push(int top, int stack[])
 
 int pop(int top, int stack[])
 {
-     int x;
+    int x;
     if (top == -1)
     {
-        printf("Empty hai yrrr🤨");
+        printf("Empty hai yrrr..!!");
     }
     else
     {
@@ -66,8 +66,10 @@ main()
             break;
         case 2:
             top = pop(top, stack);
+            break;
         case 3:
             display(top, stack);
+            break;
         }
     } while (ch <= 3);
 }
