@@ -24,7 +24,7 @@ int main()
         switch (ch)
         {
         case 1:
-            
+
             rear = enqueue(queue, rear, item);
             break;
         case 2:
