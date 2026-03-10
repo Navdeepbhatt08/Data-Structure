@@ -7,5 +7,21 @@ void disp(int top, int stack[]);
 
 main()
 {
+    int stack[max],top = -1,ch;
+    do
+    {
+        printf("1. Push \n2. POP \n3. Display \n Enter your choice : ");
+        scanf("%d",&ch);
+          switch (ch)
+          {
+          case 1:
+          top = push(top , stack[])  
+          break;
+          
+          default:
+            break;
+          }
+
+    } while (ch<=4);
     
 }
