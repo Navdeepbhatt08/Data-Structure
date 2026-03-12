@@ -15,7 +15,7 @@ slist *insert(slist *ptr)
     p = (slist*)malloc(sizeof(slist));
     if(p==NULL)
     {
-        printf("MEmory Allocation failed ");
+        printf("Memory Allocation failed ");
         return ptr;
     }
     printf("Enter  Data : " );
