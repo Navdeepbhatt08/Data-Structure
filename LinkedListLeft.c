@@ -105,7 +105,6 @@ void display(Node *node)
     printf("NULL\n");
 }
 
-
 int main()
 {
     int choice;

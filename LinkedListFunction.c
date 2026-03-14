@@ -29,6 +29,38 @@ slist *insertFirst(slist *ptr)
     return ptr;
 }
 
+slist *insertEnd(slist *ptr)
+{
+    slist *p, *temp;
+    int x;
+
+    p = (slist *)malloc(sizeof(slist));
+    if (p == NULL)
+    {
+        printf("Memory Allocation Failed");
+        return ptr;
+    }
+
+    printf("Enter data: ");
+    scanf("%d", &x);
+
+    p->data = x;
+    p->next = NULL;
+
+    if (ptr == NULL) // if list is empty
+        ptr = p;
+    else
+    {
+        temp = ptr;
+        while (temp->next != NULL) // go to last node
+            temp = temp->next;
+
+        temp->next = p; // attach new node
+    }
+
+    return ptr;
+}
+
 void display(slist *node)
 {
     if (node == NULL)
@@ -52,8 +84,9 @@ int main()
     {
         printf("\nEnter choice : ");
         printf("\n1. Insert At First");
-        printf("\n2. Display");
-        printf("\n3. Exit");
+        printf("\n2. Insert At End");
+        printf("\n3. Display");
+        printf("\n4. Exit");
         printf("\nChoice: ");
         scanf("%d", &ch);
 
@@ -64,10 +97,13 @@ int main()
             break;
 
         case 2:
+            head = insertEnd(head);
+            break;
+        case 3:
             display(head);
             break;
 
-        case 3:
+        case 4:
             printf("Exiting...\n");
             break;
 

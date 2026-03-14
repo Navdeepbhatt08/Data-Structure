@@ -45,17 +45,17 @@ stack *push(stack *top)
 {
     int x;
     stack *p = NULL;
-    p =(stack*)malloc(sizeof(stack));
+    p = (stack *)malloc(sizeof(stack));
 
-    if(p!=NULL)
+    if (p != NULL)
     {
         printf("Enter data : ");
-        scanf("%d",&x);
+        scanf("%d", &x);
         p->data = x;
         p->next = top;
         top = p;
     }
-    return(top);
+    return (top);
 }
 
 stack *pop(stack *top)
@@ -63,34 +63,34 @@ stack *pop(stack *top)
     int x;
     stack *p = NULL;
 
-    if(top==NULL)
+    if (top == NULL)
     {
-printf("UnderFlow , Don't doo....");
+        printf("UnderFlow , Don't doo....");
     }
     else
     {
         x = top->data;
-        printf("Element Poped : %d ",x);
+        printf("Element Poped : %d ", x);
         p = top;
         top = top->next;
         free(p);
     }
 
-    return(top);
+    return (top);
 }
 void disp(stack *top)
 {
-    if(top==NULL)
+    if (top == NULL)
     {
         printf("Nahi hoga bhai Data hi nahi hai...");
     }
     else
     {
-        while (top!=NULL)
+        while (top != NULL)
         {
-            printf("%d \n",top->data);
-            top= top->next;
+            printf("%d \n", top->data);
+            top = top->next;
         }
-        
     }
 }
+
