@@ -133,6 +133,7 @@ slist *deleteAlternate(slist *node)
     slist *temp;
 
     if (node == NULL)
+
     {
         printf("Empty");
     }
