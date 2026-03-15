@@ -219,7 +219,7 @@ main()
         printf("\nEnter choice : ");
         printf("\n1. Insert At Left");
         printf("\n2. Insert At Right");
-        printf("\n3. Display");
+        printf("\n3. Display the List");
         printf("\n4. Find Max Element");
         printf("\n5. Find Min Element");
         printf("\n6. Find Alternate");
