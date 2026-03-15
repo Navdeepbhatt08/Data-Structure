@@ -206,9 +206,32 @@ void search(slist *ptr)
         }
         ptr = ptr->next;
     }
-
     printf("Element Not Found\n");
 }
+
+slist *reverseList(slist *ptr)
+{
+    slist *prev = NULL;
+    slist *curr = ptr;
+    slist *next = NULL;
+
+    while(curr !=NULL)
+    {
+        next = curr->next;
+        curr->next = prev ;
+        prev = curr;
+        curr = next;
+    }
+
+    printf("Reversed List \n");
+    while(prev!=NULL)
+    {
+        printf("%d->",prev->data);
+        prev = prev->next;
+    }
+    printf("NULL\n");
+}
+
 
 main()
 {
@@ -227,7 +250,8 @@ main()
         printf("\n8. delete First ");
         printf("\n9. delete Last");
         printf("\n10. Search ");
-        printf("\n11. Exit");
+        printf("\n11. Reverse Linked List ");
+        printf("\n12. Exit");
         printf("\nChoice: ");
         scanf("%d", &ch);
         switch (ch)
@@ -262,6 +286,9 @@ main()
             break;
         case 10:
             search(head);
+            break;
+        case 11:
+            reverseList(head);
             break;
 
         default:
