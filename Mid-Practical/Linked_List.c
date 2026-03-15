@@ -44,18 +44,18 @@ slist *insertEnd(slist *ptr)
     p->data = x;
     p->next = NULL;
 
-    if (ptr == NULL) // If list is empty
+    if (ptr == NULL)
     {
         ptr = p;
     }
     else
     {
         temp = ptr;
-        while (temp->next != NULL) // Traverse to last node
+        while (temp->next != NULL)
         {
             temp = temp->next;
         }
-        temp->next = p; // Insert at end
+        temp->next = p;
     }
 
     return ptr;
@@ -99,22 +99,116 @@ void findMax(slist *node)
 void findMin(slist *node)
 {
     int min;
-    if(node == NULL)
+    if (node == NULL)
     {
         printf("Empty");
     }
     min = node->data;
-    while(node!=NULL)
+    while (node != NULL)
     {
-        if(node->data<min)
+        if (node->data < min)
         {
             min = node->data;
         }
         node = node->next;
     }
-    printf("Min Element is %d ",min);
+    printf("Min Element is %d ", min);
 }
 
+void findAlternate(slist *node)
+{
+    if (node == NULL)
+    {
+        printf("Empty");
+    }
+    while (node != NULL)
+    {
+        printf("%d-> ", node->data);
+        node = node->next->next;
+    }
+}
+
+slist *deleteAlternate(slist *node)
+{
+    slist *temp;
+
+    if (node == NULL)
+    {
+        printf("Empty");
+    }
+    while (node != NULL && node->next != NULL)
+
+    {
+        temp = node->next;
+        node->next = temp->next;
+        free(temp);
+        node = node->next;
+    }
+    printf("Alternate Deleted");
+    return node;
+}
+slist *deleteFirst(slist *ptr)
+{
+    slist *temp;
+
+    if (ptr == NULL)
+    {
+        printf("List is Empty");
+        return NULL;
+    }
+
+    temp = ptr;
+    ptr = ptr->next;
+    free(temp);
+
+    printf("First Element Deleted\n");
+    return ptr;
+}
+
+slist *deleteLast(slist *ptr)
+{
+    slist *p = ptr;
+    slist *q = NULL;
+
+    if (ptr == NULL)
+        return NULL;
+
+    if (ptr->next == NULL)
+    {
+        free(ptr);
+        return NULL;
+    }
+
+    while (p->next != NULL)
+    {
+        q = p;
+        p = p->next;
+    }
+
+    q->next = NULL;
+    free(p);
+    printf("Last Element Deleted");
+    return ptr;
+}
+
+void search(slist *ptr)
+{
+    int key;
+    printf("Enter the element you want to search: ");
+    scanf("%d", &key);
+
+    while (ptr != NULL)
+    {
+        if (ptr->data == key)
+        {
+            printf("Element Found\n");
+            return;
+        }
+        ptr = ptr->next;
+    }
+
+    printf("Element Not Found\n");
+}
 
 main()
 {
@@ -128,7 +222,12 @@ main()
         printf("\n3. Display");
         printf("\n4. Find Max Element");
         printf("\n5. Find Min Element");
-        printf("\n6. Exit");
+        printf("\n6. Find Alternate");
+        printf("\n7. delete Alternate");
+        printf("\n8. delete First ");
+        printf("\n9. delete Last");
+        printf("\n10. Search ");
+        printf("\n11. Exit");
         printf("\nChoice: ");
         scanf("%d", &ch);
         switch (ch)
@@ -149,10 +248,25 @@ main()
         case 5:
             findMin(head);
             break;
+        case 6:
+            findAlternate(head);
+            break;
+        case 7:
+            deleteAlternate(head);
+            break;
+        case 8:
+            head = deleteFirst(head);
+            break;
+        case 9:
+            head = deleteLast(head);
+            break;
+        case 10:
+            search(head);
+            break;
 
         default:
             break;
         }
 
-    } while (ch < 6);
+    } while (ch < 100);
 }
