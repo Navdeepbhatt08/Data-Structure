@@ -96,6 +96,26 @@ void findMax(slist *node)
     printf("max element is %d ", max);
 }
 
+void findMin(slist *node)
+{
+    int min;
+    if(node == NULL)
+    {
+        printf("Empty");
+    }
+    min = node->data;
+    while(node!=NULL)
+    {
+        if(node->data<min)
+        {
+            min = node->data;
+        }
+        node = node->next;
+    }
+    printf("Min Element is %d ",min);
+}
+
+
 main()
 {
     int ch;
@@ -107,7 +127,8 @@ main()
         printf("\n2. Insert At Right");
         printf("\n3. Display");
         printf("\n4. Find Max Element");
-        printf("\n5. Exit");
+        printf("\n5. Find Min Element");
+        printf("\n6. Exit");
         printf("\nChoice: ");
         scanf("%d", &ch);
         switch (ch)
@@ -125,10 +146,13 @@ main()
         case 4:
             findMax(head);
             break;
+        case 5:
+            findMin(head);
+            break;
 
         default:
             break;
         }
 
-    } while (ch < 4);
+    } while (ch < 6);
 }
