@@ -22,7 +22,7 @@ slist *insertFirst(slist *ptr)
     printf("Enter Data : ");
     scanf("%d", &x);
 
-    p->data = x;    x
+    p->data = x;    
     p->next = ptr;
     ptr = p;
 
