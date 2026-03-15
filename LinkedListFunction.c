@@ -38,6 +38,7 @@ slist *insertEnd(slist *ptr)
     if (p == NULL)
     {
         printf("Memory Allocation Failed");
+        printf("Then This iS Failed");
         return ptr;
     }
 
@@ -59,6 +60,25 @@ slist *insertEnd(slist *ptr)
     }
 
     return ptr;
+}
+
+slist *delete(slist *ptr)
+{
+    int x;
+    slist *p = NULL;
+    if (ptr == NULL)
+    {
+        printf("Empty");
+    }
+    else
+    {
+        x = ptr->data;
+        printf("%d Deleted ", x);
+        p = ptr;
+        ptr = ptr->next;
+        free(p);
+    }
+    return (ptr);
 }
 
 void display(slist *node)
@@ -86,7 +106,8 @@ int main()
         printf("\n1. Insert At First");
         printf("\n2. Insert At End");
         printf("\n3. Display");
-        printf("\n4. Exit");
+        printf("\n4. Delete");
+        printf("\n5. Exit");
         printf("\nChoice: ");
         scanf("%d", &ch);
 
@@ -104,6 +125,10 @@ int main()
             break;
 
         case 4:
+            head = delete(head);
+            break;
+
+        case 5:
             printf("Exiting...\n");
             break;
 
@@ -111,7 +136,7 @@ int main()
             printf("Invalid choice\n");
         }
 
-    } while (ch != 3);
+    } while (ch != 7);
 
     return 0;
 }
