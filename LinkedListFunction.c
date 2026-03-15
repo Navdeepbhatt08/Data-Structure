@@ -18,11 +18,10 @@ slist *insertFirst(slist *ptr)
         printf("Memory allocation failed\n");
         return ptr;
     }
-
     printf("Enter Data : ");
     scanf("%d", &x);
 
-    p->data = x;    
+    p->data = x;
     p->next = ptr;
     ptr = p;
 
@@ -55,7 +54,6 @@ slist *insertEnd(slist *ptr)
         temp = ptr;
         while (temp->next != NULL) // go to last node
             temp = temp->next;
-
         temp->next = p; // attach new node
     }
 
