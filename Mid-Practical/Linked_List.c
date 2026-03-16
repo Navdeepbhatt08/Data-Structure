@@ -215,23 +215,22 @@ slist *reverseList(slist *ptr)
     slist *curr = ptr;
     slist *next = NULL;
 
-    while(curr !=NULL)
+    while (curr != NULL)
     {
         next = curr->next;
-        curr->next = prev ;
+        curr->next = prev;
         prev = curr;
         curr = next;
     }
 
     printf("Reversed List \n");
-    while(prev!=NULL)
+    while (prev != NULL)
     {
-        printf("%d->",prev->data);
+        printf("%d->", prev->data);
         prev = prev->next;
     }
     printf("NULL\n");
 }
-
 
 main()
 {
