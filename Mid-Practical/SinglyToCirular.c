@@ -129,7 +129,6 @@ void displayCircular(node *head)
         ptr = ptr->next;
     }
 
-    
-printf("%d -> ", ptr->data);   
-printf("(Back to Head)\n");
+    printf("%d -> ", ptr->data);
+    printf("(Back to Head)\n");
 }
