@@ -123,11 +123,13 @@ void displayCircular(node *head)
 
     ptr = head;
 
-    do
+    while (ptr->next != head)
     {
         printf("%d -> ", ptr->data);
         ptr = ptr->next;
-    } while (ptr != head);
+    }
 
-    printf("(Back to Head)\n");
+    
+printf("%d -> ", ptr->data);   
+printf("(Back to Head)\n");
 }
