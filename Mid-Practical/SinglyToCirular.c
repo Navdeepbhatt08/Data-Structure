@@ -50,8 +50,10 @@ node *convertCircular(node *head)
     {
         ptr = ptr->next;
     }
-    ptr->next = head;
-    printf("back to first node\n");
+
+    ptr->next = head; // last node pointing to first node
+    printf("List converted to Circular Linked List\n");
+
     return head;
 }
 
@@ -77,7 +79,7 @@ main()
             display(head);
             break;
         case 3:
-            head = convertCircular(head, head);
+            head = convertCircular(head);
             break;
 
         default:
