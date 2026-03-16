@@ -21,6 +21,23 @@ void printAlternate(node *ptr)
     }
     printf("(Null)\n");
 }
+node *deleteAlternate(node *head)
+{
+    node *ptr = head;
+    node *temp;
+
+    while (ptr != NULL && ptr->next != NULL)
+    {
+        temp = ptr->next;
+
+        printf("Deleted: %d\n", temp->data);
+        ptr->next = temp->next;
+        free(temp);
+        ptr = ptr->next;
+    }
+
+    return head;
+}
 
 int main()
 {
@@ -34,7 +51,8 @@ int main()
         printf("\n3. Convert into Circular");
         printf("\n4. Display Circular List");
         printf("\n5. Print Alternate");
-        printf("\n6. Exit");
+        printf("\n6. Delete Alternate");
+        printf("\n7. Exit");
         printf("\nChoice: ");
         scanf("%d", &ch);
 
@@ -60,6 +78,9 @@ int main()
             break;
 
         case 6:
+            head = deleteAlternate(head);
+            break;
+        case 7:
             exit(0);
 
         default:
