@@ -54,6 +54,19 @@ void dispCicular(slist *head)
     printf("Back To First");
 }
 
+void DispSingly(slist *head)
+{
+    slist *ptr;
+    ptr = head;
+     while(ptr->next!=head)
+     {
+        printf("%d->",ptr->data);
+        ptr = ptr ->next;
+     }
+     printf("%d->",ptr->data);
+    printf("NULL");
+}
+
 slist *BubbleSort(slist *ptr)
 {
     int temp;
@@ -117,6 +130,7 @@ main()
         printf("\n3. Display Circular");
         printf("\n4. Sort");
         printf("\n5. Delete Middle");
+        printf("\n6. Disp Singly");
 
         printf("\nChoice: ");
         scanf("%d", &ch);
@@ -137,6 +151,9 @@ main()
             break;
         case 5:
             head = deleteMiddle(head);
+            break;
+        case 6:
+           DispSingly(head);
             break;
         }
 
