@@ -159,7 +159,7 @@ void displayCircular(node *head)
     ptr = head;
 
     while (ptr->next != head)
-    {
+    {   
         printf("%d -> ", ptr->data);
         ptr = ptr->next;
     }
