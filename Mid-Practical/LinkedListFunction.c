@@ -79,6 +79,32 @@ slist *BubbleSort(slist *ptr)
     printf("Null");
 }
 
+
+slist *deleteMiddle(slist *ptr)
+{
+    slist *slow = ptr;
+    slist *fast = ptr;
+    slist *prev = NULL;
+    while(fast!=NULL && fast->next!=NULL )
+    {
+        fast = fast->next->next;
+        prev = slow;
+        slow = slow->next;
+    }
+    prev->next = slow->next;
+    free(slow);
+
+printf("Middle Deleted");
+slist *temp = ptr;
+
+while(temp!=NULL)
+{
+    printf("%d->",temp->data);
+    temp = temp->next;
+}
+    return ptr;
+
+}
 main()
 {
     int ch;
@@ -90,6 +116,7 @@ main()
         printf("\n2. Display");
         printf("\n3. Display Circular");
         printf("\n4. Sort");
+        printf("\n5. Delete Middle");
 
         printf("\nChoice: ");
         scanf("%d", &ch);
@@ -107,6 +134,9 @@ main()
             break;
         case 4:
             BubbleSort(head);
+            break;
+        case 5:
+            head = deleteMiddle(head);
             break;
         }
 
