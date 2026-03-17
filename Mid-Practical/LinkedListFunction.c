@@ -43,17 +43,40 @@ void display(slist *node)
 void dispCicular(slist *head)
 {
     slist *ptr;
-    
+
     ptr = head;
-    while(ptr->next !=NULL)
+    while (ptr->next != NULL)
     {
-        printf("%d->",ptr->data);
+        printf("%d->", ptr->data);
         ptr = ptr->next;
     }
-    printf("%d->",ptr->data);
+    printf("%d->", ptr->data);
     printf("Back To First");
 }
 
+slist *BubbleSort(slist *ptr)
+{
+    int temp;
+    slist *i, *j;
+    for (i = ptr; i != NULL; i = i->next)
+    {
+        for (j = i->next; j != NULL; j = j->next)
+        {
+            if (i->data < j->data)
+            {
+                temp = i->data;
+                i->data = j->data;
+                j->data = temp;
+            }
+        }
+    }
+    printf("Sorted List : ");
+    while (ptr != NULL)
+    {
+        printf("%d->", ptr->data);
+        ptr = ptr->next;
+    }
+}
 
 main()
 {
@@ -65,7 +88,8 @@ main()
         printf("\n1. Insert At Left");
         printf("\n2. Display");
         printf("\n3. Display Circular");
- 
+        printf("\n4. Sort");
+
         printf("\nChoice: ");
         scanf("%d", &ch);
         switch (ch)
@@ -80,7 +104,9 @@ main()
         case 3:
             dispCicular(head);
             break;
-    
+        case 4:
+            BubbleSort(head);
+            break;
         }
 
     } while (ch < 100);
