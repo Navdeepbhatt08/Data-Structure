@@ -79,11 +79,7 @@ void display(slist *node)
 void findMax(slist *node)
 {
     int max;
-    if (node == NULL)
-    {
-        printf("List is Empty \n");
-        return;
-    }
+    
     max = node->data;
     while (node != NULL)
     {
@@ -147,6 +143,44 @@ slist *deleteAlternate(slist *node)
     printf("Alternate Deleted");
     return node;
 }
+
+void findDuplicate(slist *head)
+{
+    slist *ptr1, *ptr2;
+
+    for (ptr1 = head; ptr1->next != NULL; ptr1 = ptr1->next)
+        for (ptr2 = ptr1->next; ptr2 != NULL; ptr2 = ptr2->next)
+        {
+            if (ptr1->data == ptr2->data)
+            {
+                printf("%d -> ", ptr1->data);
+                break;
+            }
+        }
+}
+
+slist *deleteAlter(slist *ptr)
+{
+    slist *temp;
+    slist *head = ptr;
+
+    while (ptr != NULL && ptr->next != NULL)
+    {
+        temp = ptr->next;
+        ptr->next = temp->next;
+        free(temp);
+        ptr = ptr->next;
+    }
+    ptr = head;
+
+    while (ptr != NULL)
+    {
+        printf("%d ->", ptr->data);
+        ptr = ptr->next;
+    }
+    return head;
+}
+
 slist *deleteFirst(slist *ptr)
 {
     slist *temp;
@@ -232,6 +266,8 @@ slist *reverseList(slist *ptr)
     printf("NULL\n");
 }
 
+slist * 
+
 main()
 {
     int ch;
@@ -250,7 +286,9 @@ main()
         printf("\n9. delete Last");
         printf("\n10. Search ");
         printf("\n11. Reverse Linked List ");
-        printf("\n12. Exit");
+        printf("\n12. Delete Alternate");
+        printf("\n13. Find Duplicate");
+
         printf("\nChoice: ");
         scanf("%d", &ch);
         switch (ch)
@@ -288,6 +326,12 @@ main()
             break;
         case 11:
             reverseList(head);
+            break;
+        case 12:
+            deleteAlter(head);
+            break;
+        case 13:
+            findDuplicate(head);
             break;
 
         default:

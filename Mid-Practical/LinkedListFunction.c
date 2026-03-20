@@ -25,6 +25,9 @@ slist *insert(slist *ptr)
     ptr = p;
     return ptr;
 }
+
+
+
 void display(slist *node)
 {
     if (node == NULL)
@@ -58,15 +61,38 @@ void DispSingly(slist *head)
 {
     slist *ptr;
     ptr = head;
-     while(ptr->next!=head)
-     {
-        printf("%d->",ptr->data);
-        ptr = ptr ->next;
-     }
-     printf("%d->",ptr->data);
+    while (ptr->next != head)
+    {
+        printf("%d->", ptr->data);
+        ptr = ptr->next;
+    }
+    printf("%d->", ptr->data);
     printf("NULL");
 }
 
+slist *Sorted(slist *ptr)
+{
+    slist *i, *j;
+    int temp;
+    for (i = ptr; i != NULL; i = i->next)
+    {
+        for (j = i->next; j != NULL; j = j->next)
+        {
+            if (i->data > j->data)
+            {
+                temp = i->data;
+                i->data = j->data;
+                j->data = temp;
+            }
+        }
+    }
+    while (ptr != NULL)
+    {
+        printf("%d->", ptr->data);
+        ptr = ptr->next;
+    }
+    printf("Null");
+}
 slist *BubbleSort(slist *ptr)
 {
     int temp;
@@ -92,13 +118,12 @@ slist *BubbleSort(slist *ptr)
     printf("Null");
 }
 
-
 slist *deleteMiddle(slist *ptr)
 {
     slist *slow = ptr;
     slist *fast = ptr;
     slist *prev = NULL;
-    while(fast!=NULL && fast->next!=NULL )
+    while (fast != NULL && fast->next != NULL)
     {
         fast = fast->next->next;
         prev = slow;
@@ -107,16 +132,15 @@ slist *deleteMiddle(slist *ptr)
     prev->next = slow->next;
     free(slow);
 
-printf("Middle Deleted");
-slist *temp = ptr;
+    printf("Middle Deleted");
+    slist *temp = ptr;
 
-while(temp!=NULL)
-{
-    printf("%d->",temp->data);
-    temp = temp->next;
-}
+    while (temp != NULL)
+    {
+        printf("%d->", temp->data);
+        temp = temp->next;
+    }
     return ptr;
-
 }
 main()
 {
@@ -131,6 +155,7 @@ main()
         printf("\n4. Sort");
         printf("\n5. Delete Middle");
         printf("\n6. Disp Singly");
+        printf("\n7. Sorted");
 
         printf("\nChoice: ");
         scanf("%d", &ch);
@@ -153,7 +178,10 @@ main()
             head = deleteMiddle(head);
             break;
         case 6:
-           DispSingly(head);
+            DispSingly(head);
+            break;
+        case 7:
+            Sorted(head);
             break;
         }
 
