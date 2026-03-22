@@ -58,6 +58,8 @@ int enqueue(int queue[], int rear, int item)
     {
         rear++;
         queue[rear] = item;
+        printf("Enter x ");
+        scanf("%d",&item);
         printf("Inserted %d\n", item);
     }
     return rear;
