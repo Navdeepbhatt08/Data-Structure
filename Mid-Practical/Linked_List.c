@@ -79,7 +79,7 @@ void display(slist *node)
 void findMax(slist *node)
 {
     int max;
-    
+
     max = node->data;
     while (node != NULL)
     {
@@ -266,7 +266,7 @@ slist *reverseList(slist *ptr)
     printf("NULL\n");
 }
 
-slist * 
+slist *
 
 main()
 {
