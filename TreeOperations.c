@@ -106,6 +106,5 @@ int main()
             printf("Invalid choice\n");
         }
     }
-
     return 0;
 }
