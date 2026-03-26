@@ -8,7 +8,6 @@ typedef struct BinarySearchTree
     struct BinarySearchTree *right;
 } bst;
 
-// Insert node
 void create(bst **rt, int v)
 {
     if (*rt == NULL)
