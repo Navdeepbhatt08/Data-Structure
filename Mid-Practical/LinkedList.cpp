@@ -239,25 +239,25 @@ slist *reverseList(slist *ptr)
     return prev;
 }
 
-// Find duplicates
+
+
+
 void findDuplicate(slist *head)
 {
-    slist *ptr1, *ptr2;
-
-    for (ptr1 = head; ptr1 != NULL && ptr1->next != NULL; ptr1 = ptr1->next)
+    slist *i,*j;
+    for(i=head;i!=NULL && i->next !=NULL; i=i->next )
     {
-        for (ptr2 = ptr1->next; ptr2 != NULL; ptr2 = ptr2->next)
+        for(j=i->next;j!=NULL; j=j->next )
         {
-            if (ptr1->data == ptr2->data)
+            if(i->data == j->data)
             {
-                cout << ptr1->data << " -> ";
+                cout<< i->data <<"->";
                 break;
             }
         }
     }
-    cout << endl;
+    cout<<endl;
 }
-
 // MAIN
 int main()
 {
