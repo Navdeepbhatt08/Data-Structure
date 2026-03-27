@@ -2,13 +2,15 @@ async function getData() {
   const url = "https://example.org/products.json";
   try {
     const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`);
-    }
+    if (!response.ok) throw new Error(`Status: ${response.status}`);
 
     const result = await response.json();
-    console.log(result);
+    return result; // return instead of just logging
   } catch (error) {
     console.error(error.message);
   }
 }
+
+// Call and use the data
+const data = await getData();
+console.log(data);

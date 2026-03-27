@@ -32,7 +32,6 @@ void create(bst **rt, int v)
     }
 }
 
-// Preorder
 void preorder(bst *rt)
 {
     if (rt != NULL)
@@ -43,7 +42,6 @@ void preorder(bst *rt)
     }
 }
 
-// Inorder
 void inorder(bst *rt)
 {
     if (rt != NULL)
@@ -54,7 +52,6 @@ void inorder(bst *rt)
     }
 }
 
-// Postorder
 void postorder(bst *rt)
 {
     if (rt != NULL)
