@@ -63,6 +63,5 @@ main()
     default:
         break;
     }
-    while (ch < 4)
-        ;
+    while (ch < 4);
 }
