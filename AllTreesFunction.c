@@ -323,7 +323,7 @@ del(node **r, int n)
         return;
     }
 
-    if (d->lc == NULL && d->rc == NULL) // case 1: if node to be deleted is leaf
+    if (d->lc == NULL && d->rc == NULL) 
     {
         if (d == p->lc)
         {

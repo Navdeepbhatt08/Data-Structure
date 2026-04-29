@@ -54,6 +54,22 @@ void postorder(bst *root)
     }
 }
 
+bst *count(bst *root)
+{
+    int counting = 0;
+    while (root != NULL)
+    {
+        count(root->left);
+        counting++;
+        count(root->right);
+        counting++;
+        printf("%d ", root->data);
+        counting++;
+    }
+    return counting;
+
+}
+
 int main()
 {
     int v, ch;
@@ -86,10 +102,13 @@ int main()
             break;
 
         case 5:
+            count(root);
+            break;
+
+        case 6:
             exit(0);
 
-        default:
-            printf("Invalid choice\n");
+        default:x");
         }
     }
 }
