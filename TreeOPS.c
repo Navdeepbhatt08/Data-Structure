@@ -68,6 +68,7 @@ int countLeaf(bst *root)
 {
     if (!root) return 0;
     if (!root->left && !root->right) return 1;
+    
     return countLeaf(root->left) + countLeaf(root->right);
 }
 

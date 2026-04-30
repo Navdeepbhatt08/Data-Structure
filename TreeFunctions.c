@@ -54,20 +54,37 @@ void postorder(bst *root)
     }
 }
 
-bst *count(bst *root)
+int count(bst *root)
 {
-    int counting = 0;
-    while (root != NULL)
-    {
-        count(root->left);
-        counting++;
-        count(root->right);
-        counting++;
-        printf("%d ", root->data);
-        counting++;
-    }
-    return counting;
+    if (root == NULL)
+        return 0;
 
+    return 1 + count(root->left) + count(root->right);
+}
+
+int leafNode(bst *root)
+{
+    if (root == NULL)
+        return 0;
+
+    if (root->left == NULL && root->right == NULL)
+        return 1;
+
+    return leafNode(root->left) + leafNode(root->right);
+}
+
+int LeftChildOnly(bst *root)
+{
+
+    if (root == NULL)
+        return 0;
+
+    int count = 0;
+    if (root->left != NULL && root->right == NULL)
+    {
+        count = 1;
+    }
+    return count + LeftChildOnly(root->left) + LeftChildOnly(root->right);
 }
 
 int main()
@@ -77,7 +94,7 @@ int main()
 
     while (1)
     {
-        printf("\n1. Insert\n2. Preorder\n3. Inorder\n4. Postorder\n5. Exit\n");
+        printf("\n1. Insert\n2. Preorder\n3. Inorder\n4. Postorder\n5. Count Nodes\n6.Count Leaf Node \n7.Having Left Child Only\n");
         printf("Enter choice: ");
         scanf("%d", &ch);
 
@@ -102,13 +119,20 @@ int main()
             break;
 
         case 5:
-            count(root);
+            printf("Total nodes = %d\n", count(root));
             break;
 
         case 6:
-            exit(0);
+            printf("Leaf Node = %d", leafNode(root));
 
-        default:x");
+            break;
+        case 7:
+            printf("Left Child Only Node = %d", LeftChildOnly(root));
+
+            break;
+
+        case 8:
+            exit(0);
         }
     }
 }
